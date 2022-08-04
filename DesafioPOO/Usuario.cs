@@ -9,9 +9,9 @@ namespace DesafioPOO
     public abstract class Usuario
     {
         protected int Id;
-        protected string Nome { get; set; }
+        public string Nome { get; set; }
         protected string Email { get; set; }
-        protected string Senha { get; set; }
+        public string Senha { get; set; }
         protected int Telefone { get; set; }
 
         public void Cadastrar ()

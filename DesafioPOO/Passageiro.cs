@@ -12,6 +12,9 @@ namespace DesafioPOO
         private Endereco EndDestino { get; set; }
         private FormaPagamento Pagamento { get; set; }
 
+        Endereco adress = new Endereco();
+        adress.C
+
         public void SolicitarDestino (Endereco partida, Endereco chegada)
         {
             EndOrigem = partida;

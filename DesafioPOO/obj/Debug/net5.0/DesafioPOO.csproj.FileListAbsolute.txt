@@ -1,0 +1,5 @@
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\DesafioPOO.csproj.AssemblyReference.cache
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\DesafioPOO.GeneratedMSBuildEditorConfig.editorconfig
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\DesafioPOO.AssemblyInfoInputs.cache
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\DesafioPOO.AssemblyInfo.cs
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\DesafioPOO.csproj.CoreCompileInputs.cache

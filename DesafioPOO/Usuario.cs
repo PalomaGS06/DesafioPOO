@@ -26,13 +26,13 @@ namespace DesafioPOO
             Console.Write("Insira seu email: ");
             Email = Console.ReadLine();
 
-            Console.Write("Insira seu contato com o DDD: ");
-            Telefone = int.Parse(Console.ReadLine());
-
             Console.Write("Insira uma senha: ");
             Senha = Console.ReadLine();
 
-            
+            Console.Write("Insira seu contato com o DDD: ");
+            Telefone = int.Parse(Console.ReadLine());
+
+                        
             Console.WriteLine("Usuário Cadastrado!");
             Thread.Sleep(55000);
         }

@@ -10,9 +10,10 @@ namespace DesafioPOO
     {
         private float Valor { get; set; }
 
-        public void Pagar()
+        public bool Pagar()
         {
             Console.WriteLine("Pagamento Concluído!");
+            return true;
         }
     }
 }

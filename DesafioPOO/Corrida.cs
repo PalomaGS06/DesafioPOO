@@ -15,7 +15,9 @@ namespace DesafioPOO
         {   
 
             Aguardando,
+            Encontrado,
             Iniciada,
+            Andando,
             Finalizada
         }
 

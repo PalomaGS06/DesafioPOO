@@ -8,24 +8,36 @@ namespace DesafioPOO
 {
     public class TipoCartao : Cartao
     {
-        public bool Debito { get; set; }
-        public bool Credito { get; set; }
 
-        public void EscolherDebito(float Saldo, float Valor)
+
+     public enum Cartoes
         {
-            if (Debito)
-            {
-                Console.WriteLine($"Seu saldo é de R$:{Math.Round(Saldo, 2)} !");
-                Saldo -= Valor;
-            }
-            
+            Debito,
+            Credito
+        }
+
+        public void EscolherCartao(int numero , string nome, DateTime validade, int cvv)
+        {
+            NumeroCartao = numero;
+            NomeTitular = nome;
+            Validade = validade;
+            CVV = cvv;
+
+        }
+
+
+
+        public void EscolherDebito( float Saldo, float Valor)
+        {
+            Console.WriteLine(Cartoes.Debito);
+             Saldo -= Valor;
+             
         }
 
         public void EscolherCredito(float Limite, float Valor)
         {
-            if (Credito)
             {
-                Console.WriteLine($"Seu limite é de R$:{Math.Round(Limite, 2)} !");
+                Console.WriteLine(Cartoes.Credito);
                 Limite -= Valor;
             }
             

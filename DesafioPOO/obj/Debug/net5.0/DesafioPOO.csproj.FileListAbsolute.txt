@@ -3,3 +3,14 @@ E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\DesafioPOO.
 E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\DesafioPOO.AssemblyInfoInputs.cache
 E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\DesafioPOO.AssemblyInfo.cs
 E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\DesafioPOO.csproj.CoreCompileInputs.cache
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\bin\Debug\net5.0\DesafioPOO.exe
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\bin\Debug\net5.0\DesafioPOO.deps.json
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\bin\Debug\net5.0\DesafioPOO.runtimeconfig.json
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\bin\Debug\net5.0\DesafioPOO.runtimeconfig.dev.json
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\bin\Debug\net5.0\DesafioPOO.dll
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\bin\Debug\net5.0\DesafioPOO.pdb
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\DesafioPOO.dll
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\refint\DesafioPOO.dll
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\DesafioPOO.pdb
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\DesafioPOO.genruntimeconfig.cache
+E:\COURSES\.NET Core\Projetos\DesafioPOO\DesafioPOO\obj\Debug\net5.0\ref\DesafioPOO.dll

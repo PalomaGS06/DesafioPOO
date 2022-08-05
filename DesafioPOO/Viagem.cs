@@ -8,9 +8,11 @@ namespace DesafioPOO
 {
     public class Viagem
     {
+        public Endereco EndOrigem;
+        public Endereco EndDestino;
         public float ValorCorrida = 23.90f;
-        public Passageiro _passageiro;
-        public Motorista _motorista;
+        public Passageiro passageiro;
+        public Motorista motorista;
         public Corrida.Status statusviagem;
 
         public void SolicitarDestino (Endereco partida, Endereco chegada)

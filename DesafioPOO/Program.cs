@@ -8,15 +8,15 @@ namespace DesafioPOO
     {
         static void Main(string[] args)
         {
-
-            Console.Write("Login: ");
+            Titulo();
+            Console.Write("Login:  ");
             string userLogin = Console.ReadLine();
 
-            Console.WriteLine("Senha: ");
+            Console.Write("Senha:  ");
             string senhaLogin = Console.ReadLine();
 
 
-            Passageiro passenger = new Passageiro(46823465256,"Bilbo", "bilbobaggins@gmail.com","naosouladrao",95252952614);
+            Passageiro passenger = new Passageiro(463465256,"Bilbo", "bilbobaggins@gmail.com","naosouladrao",952529014);
                        
             List<Motorista> motorista = new List<Motorista>();
 
@@ -42,26 +42,30 @@ namespace DesafioPOO
             motorista.Add(m6);
 
             Dinheiro dinheiro = new Dinheiro();
-            passenger.pagar.Add(dinheiro);
+            passenger.pagar.Add(FormaPagamento.Dinheiro);
 
 
             bool exit = false;
 
-            Console.Write("Iniciando");
+            Console.Write("\n\n\n\nIniciando  ");
             Thread.Sleep(1000);
-            Console.Write("֍");
+            Console.Write("☺");
             Thread.Sleep(1000);
-            Console.Write("֍");
+            Console.Write("☻");
             Thread.Sleep(1000);
-            Console.Write("֍");
+            Console.Write("☺");
             Thread.Sleep(1000);
-            Console.Write("֍");
+            Console.Write("☻");
+            Thread.Sleep(1000);
+            Console.Write("☺");
+            Thread.Sleep(1000);
+            Console.Write("☻");
             Thread.Sleep(1000);
 
-            //CabecalhoDivisorias cabecalho = new CabecalhoDivisorias();
-            //cabecalho.Cabecalho("Nopein");
+            Console.Clear();
+            Titulo();
 
-            Console.Write($"Bem-Vindo(a) {passenger.Nome} !!");
+            Console.Write($"\n\n\nBem-Vindo(a) {passenger.Nome} !!");
 
             do
             {
@@ -70,7 +74,7 @@ namespace DesafioPOO
                 Console.Write($"\n\nSelecione uma opção desejada: \n" +
                     $"\n1 - Solicitar corrida" +
                     $"\n2 - Adicionar forma de pagamento" +
-                    $"\n3 - Sair\n\n :   ");
+                    $"\n3 - Sair:  \n\n ");
                 escolher = Console.ReadLine();
 
                 while (escolher != "1" && escolher != "2" && escolher != "3")
@@ -90,11 +94,11 @@ namespace DesafioPOO
                 }
                 else
                 {
-                    passenger.SolicitarDestino(passenger, motorista, passenger.pagar);
+                    passenger.SolicitarDestino(passenger.EndOrigem,passenger.EndDestino, passenger, motorista, passenger.pagar);
                 }
 
                     Console.Clear();
-                    Console.Write("\nDeseja exit?\n" +
+                    Console.Write("\nDeseja sair?\n" +
                         "\n1 - Sim" +
                         "\n2 - Não\n\n :   ");
                     escolher = Console.ReadLine();
@@ -124,10 +128,31 @@ namespace DesafioPOO
             } while (!exit);
 
             Console.Clear();
-            // cabecalho.Cabecalho("Nopein");
+            Titulo();
             Console.WriteLine("Obrigado por usar Nopein!");
 
 
         }
+
+        static void Titulo()
+        {
+
+            for (int x = 0; x < Console.WindowWidth / 2; x++) 
+            {
+                Console.Write("<>"); 
+            }
+
+            Console.WriteLine("  ");
+
+            //Título centralizado na coloração azul claro
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write($"  NOPEIN  \n".PadLeft(73, ' '));
+            Console.ResetColor();
+
+            //Linhas centralizadas sublinhando o título
+            Console.Write($"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n".PadLeft(83, ' '));
+
+        }
+
     }
 }

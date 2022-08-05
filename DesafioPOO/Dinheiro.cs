@@ -8,7 +8,7 @@ namespace DesafioPOO
 {
     public class Dinheiro
     {
-        private float Valor { get; set; }
+        public float Valor { get; set; }
 
         public bool Pagar()
         {

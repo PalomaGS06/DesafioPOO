@@ -9,7 +9,7 @@ namespace DesafioPOO
     public abstract class Cartao
     {
         public TipoCartao Tipo { get; set; }
-        protected int NumeroCartao;
+        public int NumeroCartao;
         protected string NomeTitular;
         protected DateTime Validade;
         protected int CVV;

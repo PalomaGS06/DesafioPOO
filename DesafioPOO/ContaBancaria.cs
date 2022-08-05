@@ -13,11 +13,8 @@ namespace DesafioPOO
         public int Agencia { get; set; }
         public string Banco { get; set; }
         
-        public void PagarMotorista(float valor)
-        {
-            Console.WriteLine("Pagar motorista! ");
-        }
-        public ContaBancaria(int _numero, int _agencia, string _banco)
+        public ContaBancaria(){ }
+            public ContaBancaria(int _numero, int _agencia, string _banco)
         {
             NumeroConta = _numero;
             Agencia = _agencia;

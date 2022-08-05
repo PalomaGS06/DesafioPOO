@@ -22,23 +22,23 @@ namespace DesafioPOO
 
             Automovel carro = new Automovel("ABC1234", "Preto", "CRV", "Honda");
             ContaBancaria conta = new ContaBancaria(656526, 56, "Bradesco");
-            Motorista m2 = new Motorista(6156894, "Gandalf", "gandalfmago@gmail.com", "mithrandir", 95252952614, conta, carro);
+            Motorista m2 = new Motorista(6156894, "Gandalf", "gandalfmago@gmail.com", "mithrandir", 9558648, carro, conta);
             motorista.Add(m2);
             carro = new Automovel("EFG4896", "Prata", "HB20", "Hyundai");
             conta = new ContaBancaria(465456, 015, "Santander");
-            Motorista m3 = new Motorista(2985652, "Thranduil", "thranduilflorest@gmail.com", "vaidoso", 561615663, conta, carro);
+            Motorista m3 = new Motorista(2985652, "Thranduil", "thranduilflorest@gmail.com", "vaidoso", 561615663, carro, conta);
             motorista.Add(m3);
             carro = new Automovel("AFE645", "Branco", "Focus", "Ford");
             conta = new ContaBancaria(22395, 05, "Nubank");
-            Motorista m4 = new Motorista(6859256, "Legolas", "elfofoda@gmail.com", "ninjadaflecha", 64565659, conta, carro);
+            Motorista m4 = new Motorista(6859256, "Legolas", "elfofoda@gmail.com", "ninjadaflecha", 64565659, carro, conta);
             motorista.Add(m4);
             carro = new Automovel("OIJ9581", "Cinza", "qq", "Chery");
             conta = new ContaBancaria(626186, 84, "C6 Bank");
-            Motorista m5 = new Motorista(5926854, "Thorin", "thorinsonthrain@gmail.com", "escudodecarvalho", 5968695, conta, carro);
+            Motorista m5 = new Motorista(5926854, "Thorin", "thorinsonthrain@gmail.com", "escudodecarvalho", 5968695, carro, conta);
             motorista.Add(m5);
             carro = new Automovel("VKO5695", "Branco", "Lancer", "Mitsubishi");
             conta = new ContaBancaria(392451, 72, "Next");
-            Motorista m6 = new Motorista(172142, "Galadriel", "elfaforte@gmail.com", "elfadeRivendell", 52649985, conta, carro);
+            Motorista m6 = new Motorista(172142, "Galadriel", "elfaforte@gmail.com", "elfadeRivendell", 52649985, carro, conta);
             motorista.Add(m6);
 
             Dinheiro dinheiro = new Dinheiro();

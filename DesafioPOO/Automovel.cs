@@ -20,5 +20,7 @@ namespace DesafioPOO
             Modelo = _modelo;
             Marca = _marca;
         }
+
+        public Automovel() { }
     }
 }

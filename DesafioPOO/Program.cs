@@ -105,7 +105,7 @@ namespace DesafioPOO
 
                     while (escolher != "1" && escolher != "2")
                     {
-                        Console.Write("\nOpção inválida. Tente outra vez (1- Sim, 2- Não): ");
+                        Console.Write("\nOpção inválida. Tente outra vez (1- Sim, 2- Não):\n\n ");
                         escolher = Console.ReadLine();
                     }
                

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DesafioPOO
@@ -16,16 +17,40 @@ namespace DesafioPOO
 
         public void Cadastrar ()
         {
+            Console.Write("Insira seu CPF, só com números: ");
+            Id = int.Parse(Console.ReadLine());
+
+            Console.Write("Insira seu nome: ");
+            Nome = Console.ReadLine();
+
+            Console.Write("Insira seu email: ");
+            Email = Console.ReadLine();
+
+            Console.Write("Insira seu contato com o DDD: ");
+            Telefone = int.Parse(Console.ReadLine());
+
+            Console.Write("Insira uma senha: ");
+            Senha = Console.ReadLine();
+
+            
             Console.WriteLine("Usuário Cadastrado!");
+            Thread.Sleep(55000);
         }
 
-        public bool FazerLogin (string email, int id, string senha)
+        public bool FazerLogin ( string nome, string senha)
         {
-            Email = email;
-            Id = id;
-            Senha = senha;
 
-            return true;
+            if (nome == Nome && senha == Senha)
+            {
+                Console.WriteLine("Usuário conectado com sucesso!");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Nome ou senha inválidos, por favor, tente novamente!");
+            }
+
+            return false;
         }
 
 

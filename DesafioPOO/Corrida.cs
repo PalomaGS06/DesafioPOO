@@ -12,7 +12,8 @@ namespace DesafioPOO
         public Status StatusAtual { get; set; }
 
         public enum Status
-        {
+        {   
+
             Aguardando,
             Iniciada,
             Finalizada

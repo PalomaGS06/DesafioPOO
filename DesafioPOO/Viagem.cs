@@ -8,7 +8,10 @@ namespace DesafioPOO
 {
     public class Viagem
     {
-        private float ValorCorrida { get; set; }
+        public float ValorCorrida = 23.90f;
+        public Passageiro _passageiro;
+        public Motorista _motorista;
+        public Corrida.Status statusviagem;
 
         public void SolicitarDestino (Endereco partida, Endereco chegada)
         {
@@ -17,7 +20,6 @@ namespace DesafioPOO
         }
 
         public void PagarMotorista(float valor)
-
         {
 
         }

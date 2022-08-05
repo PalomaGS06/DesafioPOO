@@ -8,12 +8,36 @@ namespace DesafioPOO
 {
     public class Passageiro : Usuario
     {
-        private Endereco EndOrigem { get; set; }
-        private Endereco EndDestino { get; set; }
-        private FormaPagamento Pagamento { get; set; }
+        public Endereco EndOrigem { get; set; }
+        public Endereco EndDestino { get; set; }
+        public FormaPagamento Pagamento { get; set; }
+
+        //bool Logar(string userLogin, string senhaLogin)
+        //{
+        //    bool valido = false;
+        //    bool valido1 = false;
+        //    bool valido2 = false;
+
+        //    if (userLogin == passenger.Nome)
+        //    {
+        //        valido1 = true;
+        //    }
+
+        //    if (senhaLogin == passenger.Senha)
+        //    {
+        //        valido2 = true;
+        //    }
+
+        //    if (valido1 && valido2)
+        //    {
+        //        valido = true;
+        //    }
+        //    return valido;
+        //}
+
 
         Endereco adress = new Endereco();
-        adress.C
+    
 
         public void SolicitarDestino (Endereco partida, Endereco chegada)
         {

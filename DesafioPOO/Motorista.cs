@@ -8,8 +8,8 @@ namespace DesafioPOO
 {
     public class Motorista : Usuario
     {
-        private ContaBancaria Conta { get; set; }
-        private Automovel TipoTransporte { get; set; }
+        public ContaBancaria Conta { get; set; }
+        public Automovel TipoTransporte { get; set; }
 
         public void NomeMotorista()
         {

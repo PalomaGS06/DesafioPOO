@@ -14,9 +14,6 @@ namespace DesafioPOO
         protected DateTime Validade;
         protected int CVV;
 
-        public void Pagar()
-        {
-            Console.WriteLine("Pagamento Concluído!");
-        }
+
     }
 }

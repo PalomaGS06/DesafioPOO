@@ -8,15 +8,17 @@ namespace DesafioPOO
 {
     public class Automovel
     {
-        private string Placa { get; set; }
-        private string Cor { get; set; }
-        private string Modelo { get; set; }
-        private string Marca { get; set; }
+        public string Placa { get; set; }
+        public string Cor { get; set; }
+        public string Modelo { get; set; }
+        public string Marca { get; set; }
 
-        public string ObterDados(string DadosCarro)
+        public Automovel(string _placa, string _cor, string _modelo, string _marca )
         {
-            
-            return DadosCarro;
+            Placa = _placa;
+            Cor = _cor;
+            Modelo = _modelo;
+            Marca = _marca;
         }
     }
 }

@@ -11,22 +11,24 @@ namespace DesafioPOO
         public bool Debito { get; set; }
         public bool Credito { get; set; }
 
-        public bool EscolherDebito(float Saldo)
+        public void EscolherDebito(float Saldo, float Valor)
         {
             if (Debito)
             {
                 Console.WriteLine($"Seu saldo é de R$:{Math.Round(Saldo, 2)} !");
+                Saldo -= Valor;
             }
-            return true;
+            
         }
 
-        public bool EscolherCredito(float Limite)
+        public void EscolherCredito(float Limite, float Valor)
         {
             if (Credito)
             {
                 Console.WriteLine($"Seu limite é de R$:{Math.Round(Limite, 2)} !");
+                Limite -= Valor;
             }
-            return true;
+            
         }
 
     }

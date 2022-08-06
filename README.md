@@ -14,14 +14,14 @@
 - Estruturas condicionais simples e compostas e estruturas de repetição/loop:
   - While/ Do While/ For;
 - Heranças;
-- Classes abstratas
-- Métodos Construtores
-- Polimorfismo
-  - Sobrecargas;
+- Classes abstratas;
+- Métodos Construtores;
+- Polimorfismo:
+  - Sobrecargas
 - Enums;
 - Encapsulamento;
 - Relacionamentos:
   - Composição
-  - Agregação.
+  - Agregação
 
 

@@ -21,6 +21,7 @@ namespace DesafioPOO
             Finalizada
         }
 
+
         public bool ReceberPedidoViagem()
         {
             return true;

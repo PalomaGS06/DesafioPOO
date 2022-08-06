@@ -113,6 +113,9 @@ namespace DesafioPOO
                     }
 
                     Console.Clear();
+
+                    Titulo();
+
                     Console.Write("\nDeseja sair?\n" +
                         "\n1 - Sim" +
                         "\n2 - Não:\n\n    ");

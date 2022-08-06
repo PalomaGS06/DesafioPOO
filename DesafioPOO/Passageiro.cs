@@ -83,7 +83,7 @@ namespace DesafioPOO
                                           $"\nEscolha uma forma de pagamento de sua preferência:  ");
 
 
-                        Console.Write("\n\n1 Cartão " +
+                        Console.Write("\n1 - Cartão " +
                                       "\n2 - Dinheiro " +
                                       "\n3 - Pix :\n\n ");
                         escolher = Console.ReadLine();
@@ -148,9 +148,10 @@ namespace DesafioPOO
 
                     Console.Clear();
 
+                    Titulo();
 
                     viajar.statusviagem = Corrida.Status.Aguardando;
-                    Console.WriteLine("\n");
+                    Console.WriteLine("\n\n");
                     Titulo();
 
                     Console.WriteLine("Endereço de origem: ");

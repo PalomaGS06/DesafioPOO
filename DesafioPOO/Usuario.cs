@@ -39,9 +39,11 @@ namespace DesafioPOO
 
         public bool FazerLogin ( string nome, string senha)
         {
-
+            
             if (nome == Nome && senha == Senha)
             {
+                Console.Clear();
+                Passageiro.Titulo();
                 Console.WriteLine("Usuário conectado com sucesso!");
                 return true;
             }

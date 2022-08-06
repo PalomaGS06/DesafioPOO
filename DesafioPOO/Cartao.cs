@@ -10,9 +10,9 @@ namespace DesafioPOO
     {
         public TipoCartao Tipo { get; set; }
         public int NumeroCartao;
-        protected string NomeTitular;
-        protected DateTime Validade;
-        protected int CVV;
+        public string NomeTitular;
+        public DateTime Validade;
+        public int CVV;
 
 
     }

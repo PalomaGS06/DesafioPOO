@@ -15,6 +15,21 @@ namespace DesafioPOO
         public string Cidade;
         public string Estado;
         public string Pais;
-      
+
+        public Endereco(int cep, string rua, int numero, string bairro, string cidade, string estado, string pais)
+        {
+            CEP = cep;
+            Rua = rua;
+            Numero = numero;
+            Bairro = bairro;
+            Cidade = cidade;
+            Estado = estado;
+            Pais = pais;
+        }
+
+        public override string ToString()
+        {
+            return $"\n CEP: {CEP}\n Rua: {Rua}\n Número: {Numero}\n Bairro: {Bairro}\n Cidade: {Cidade}\n Estado: {Estado}\n País: {Pais}\n";
+        }
     }
 }

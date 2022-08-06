@@ -12,16 +12,12 @@ namespace DesafioPOO
         public Endereco EndOrigem { get; set; }
         public Endereco EndDestino { get; set; }
         public FormaPagamento Pagamento { get; set; }
+        public TipoCartao Cartao { get; set; }
 
-       
-       
-        Endereco adress = new Endereco();
-         
-        //    //
- 
+
         public List<FormaPagamento> pagar = new List<FormaPagamento>();
 
-        public Passageiro()  { }
+        public Passageiro() { }
 
         public Passageiro(int _id, string _nome, string _email, string _senha, int _telefone)
         {
@@ -29,21 +25,17 @@ namespace DesafioPOO
             Nome = _nome;
             Email = _email;
             Senha = _senha;
-           Telefone = _telefone;
+            Telefone = _telefone;
         }
 
         public Viagem viajar = new Viagem();
 
 
-        public void SolicitarDestino (Endereco partida, Endereco chegada, Passageiro _passageiro, List<Motorista> _motorista, List<FormaPagamento> _pagamento)
+        public void SolicitarDestino(Endereco partida, Endereco chegada, Passageiro _passageiro, List<Motorista> _motorista, List<FormaPagamento> _pagamento)
         {
-            EndOrigem = partida;
-            EndDestino = chegada;
-            
-        
             bool exit = false;
 
-       
+
             do
             {
                 Console.Clear();
@@ -52,18 +44,18 @@ namespace DesafioPOO
 
                 viajar.passageiro = _passageiro;
 
-                Console.Write("Informar seu endereço de origem:   ");
-                string origem = Console.ReadLine();
-                viajar.EndOrigem = partida;
+                //Console.Write("Informar seu endereço de origem:   ");
+                //string origem = Console.ReadLine();
+                //viajar.EndOrigem = partida;
 
-                Console.Write("\nInformar seu endereço de destino:    ");
-                string destino = Console.ReadLine();
-                viajar.EndDestino = chegada;
+                //Console.Write("\nInformar seu endereço de destino:    ");
+                //string destino = Console.ReadLine();
+                //viajar.EndDestino = chegada;
 
 
                 Console.Write($"\nO valor da corrida ficará em  R$:{viajar.ValorCorrida}. Deseja Confirmar?\n" +
                               $"\n1 - Sim" +
-                              $"\n2 - Não:   \n\n ");
+                              $"\n2 - Não: \n\n ");
 
                 string escolher = Console.ReadLine();
 
@@ -75,32 +67,11 @@ namespace DesafioPOO
                 }
 
                 if (escolher == "2")
-                { 
-                    break; 
+                {
+                    break;
                 }
                 else
                 {
-
-                    List <TipoCartao.Cartoes> debito = new List<TipoCartao.Cartoes>();
-                    List<TipoCartao.Cartoes> credito = new List<TipoCartao.Cartoes>();
-
-
-                    for (int i = 0; i < pagar.Count; i++)
-                    {
-                        if (pagar[i] is TipoCartao.Cartoes)
-                        {
-                            debito.Add((TipoCartao.Cartoes)pagar[i]);
-                        }
-                        else if (pagar[i] is TipoCartao.Cartoes)
-                        {
-                            credito.Add((TipoCartao.Cartoes)pagar[i]);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Cartão inválido!");
-                        }
-                    }
-
 
                     do
                     {
@@ -113,34 +84,37 @@ namespace DesafioPOO
 
 
                         Console.Write("\n\n1 Cartão " +
-                                      "\n2 - Pix " +
-                                      "\n3 - Dinheiro :  \n\n ");
+                                      "\n2 - Dinheiro " +
+                                      "\n3 - Pix :\n\n ");
                         escolher = Console.ReadLine();
 
 
                         Dinheiro dinheiro = new Dinheiro();
-                        
+                        Pix pix = new Pix();
+
 
                         switch (escolher)
                         {
                             case "1":
                                 Console.Write("\n\nEscolha o tipo de cartão :  \n\n");
-                                Console.Write("\n1 - Débito:  \n2 - Crédito\n\n");
+                                Console.Write("\n1 - Débito:  \n2 - Crédito:\n\n");
                                 escolher = Console.ReadLine();
 
-                               if (escolher == "1") 
-                                { 
-                                        Console.WriteLine(TipoCartao.Cartoes.Debito);
+                                if (escolher == "1")
+                                {
+                                    Console.WriteLine(TipoCartao.Cartoes.Debito);
+                                    exit = true;
                                 }
                                 else if (escolher == "2")
                                 {
                                     Console.WriteLine(TipoCartao.Cartoes.Credito);
+                                    exit = true;
                                 }
                                 else
-                                    {
-                                     Console.WriteLine("Cartão inválido! ");
+                                {
+                                    Console.WriteLine("Cartão inválido! ");
                                 }
-                                    break;
+                                break;
 
 
                             case "2":
@@ -153,9 +127,9 @@ namespace DesafioPOO
                                 Console.WriteLine(FormaPagamento.Pix);
                                 Console.Clear();
                                 //cabecalho.Cabecalho("Nova Viagem");
-                                Console.Write("Seu código Pix gerado:  " + dinheiro.Pagar() + "\n\n");
+                                pix.Pagar();
                                 Thread.Sleep(3000);
-                                Console.WriteLine("Pagamento efetuado. Aperte qualquer tecla para começar sua corrida!");
+                                Console.WriteLine("\n Pagamento efetuado. Aperte qualquer tecla para começar sua corrida!");
                                 Console.ReadKey();
 
                                 exit = true;
@@ -170,12 +144,21 @@ namespace DesafioPOO
 
                         }
                     } while (!exit);
+                   
+
+                    Console.Clear();
+
 
                     viajar.statusviagem = Corrida.Status.Aguardando;
                     Console.WriteLine("\n");
+                    Titulo();
 
-                    Console.Clear();
-                    //cabecalho.Cabecalho("Viagem Atual");
+                    Console.WriteLine("Endereço de origem: ");
+                    Console.WriteLine(_passageiro.EndOrigem);
+
+                    Console.WriteLine("Endereço de destino: ");
+                    Console.WriteLine(_passageiro.EndDestino);
+
                     Console.Write("Procurando motorista!  ");
                     Thread.Sleep(800);
                     Console.Write("☺");
@@ -200,13 +183,13 @@ namespace DesafioPOO
                     viajar.motorista = _motorista[MotoristaAleatorio];
                     Console.Write($"Seu motorista é: {_motorista[MotoristaAleatorio].Nome}\nCarro: {_motorista[MotoristaAleatorio].TipoTransporte.Modelo}, {_motorista[MotoristaAleatorio].TipoTransporte.Marca} \nPlaca: {_motorista[MotoristaAleatorio].TipoTransporte.Placa}\nCor: {_motorista[MotoristaAleatorio].TipoTransporte.Cor}\n\n");
                     Thread.Sleep(3000);
-                             
+
                     viajar.statusviagem = Corrida.Status.Iniciada;
                     Console.Write("\n\nO motorista chegou ao destino! ");
                     Thread.Sleep(5000);
 
                     viajar.statusviagem = Corrida.Status.Andando;
-                    Console.Write("\n\nViagem em percurso! ");
+                    Console.Write("\n\nViagem em percurso ");
                     Thread.Sleep(1500);
                     Console.Write("☺");
                     Thread.Sleep(1500);
@@ -218,8 +201,8 @@ namespace DesafioPOO
                     Thread.Sleep(1500);
 
                     viajar.statusviagem = Corrida.Status.Finalizada;
-                    Console.Write("\n\nParabéns! Você chegou ao seu destino! Lembre-se de pegar seus pertences antes de sair do veículo!  ");
-                    Thread.Sleep(20000);
+                    Console.Write("\n\nParabéns! Você chegou ao seu destino! Lembre-se de pegar seus pertences antes de sair do veículo!\n\n\n  ");
+                    Thread.Sleep(8000);
 
                     Console.Clear();
 
@@ -235,11 +218,14 @@ namespace DesafioPOO
 
         }
 
-        public void AdicionarPagamento()
+        public void AdicionarCartao(int numero, string nome, DateTime validade, int cvv)
         {
-  
+
             bool exit = false;
-         
+
+            Cartao = new TipoCartao();
+
+            Cartao.EscolherCartao(numero, nome, validade, cvv);
 
             do
             {
@@ -247,58 +233,53 @@ namespace DesafioPOO
 
                 Titulo();
 
-                Console.Write("\n Por favor, insira seus dados do cartão: ");
-     
                 Console.Write($"DADOS do Cartão:\n\n" +
-                                  $"Nome do Titular:  {Nome}\n" +
-                                  $"Número do Cartão:  {Email}\n" +
-                                  $"Validade do Cartão:  {Telefone}\n" +
-                                  $"CVV:  {Senha}");
+                                  $"{Cartao}");
 
 
-                    Console.Write("Deseja confirmar seus dados?\n" +
+                Console.Write("Deseja confirmar seus dados?\n" +
+                              "\n1 - Sim" +
+                              "\n2 - Não:  \n\n ");
+                string escolher = Console.ReadLine();
+
+                while (escolher != "1" && escolher != "2")
+                {
+                    Console.Write("\nOpção inválida. Tente outra vez... ");
+                    escolher = Console.ReadLine();
+                }
+
+                if (escolher == "1")
+                {
+                    exit = true;
+                }
+                else
+                {
+                    Console.Write("\n\nCancelar o cartão adicional?\n" +
                                   "\n1 - Sim" +
-                                  "\n2 - Não:  \n\n ");
-                    string escolher = Console.ReadLine();
+                                  "\n2 - Não :  \n\n ");
+                    escolher = Console.ReadLine();
 
                     while (escolher != "1" && escolher != "2")
                     {
-                        Console.Write("\nOpção inválida. Tente outra vez... ");
+                        Console.Write("\nOpção inválida. Tente novamente (1 - Sim, 2 - Não):\n\n ");
                         escolher = Console.ReadLine();
                     }
 
                     if (escolher == "1")
                     {
-                        //pagar.Add(Cartao.Equals);
-                    }
-                    else
-                    {
-                        Console.Write("\n\nCancelar o método de pagamento adicional?\n" +
-                                      "\n1 - Sim" +
-                                      "\n2 - Não :  \n\n ");
-                        escolher = Console.ReadLine();
-
-                        while (escolher != "1" && escolher != "2")
-                        {
-                            Console.Write("\nOpção inválida. Tente novamente (1 - Sim, 2 - Não):\n\n ");
-                            escolher = Console.ReadLine();
-                        }
-
-                        if (escolher == "1")
-                        {
-                            Console.Clear();
+                        Console.Clear();
 
                         Titulo();
 
-                            break;
-                        }
-
-                        else
-                        {
-                            exit = false;
-                        }
-
+                        break;
                     }
+
+                    else
+                    {
+                        exit = false;
+                    }
+
+                }
 
                 Console.Clear();
                 Titulo();
@@ -306,8 +287,7 @@ namespace DesafioPOO
             } while (!exit);
         }
 
-
-        static void Titulo()
+        public static void Titulo()
         {
 
             for (int x = 0; x < Console.WindowWidth / 2; x++)

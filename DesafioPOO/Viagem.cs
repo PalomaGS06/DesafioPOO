@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DesafioPOO.Corrida;
 
 namespace DesafioPOO
 {
@@ -10,10 +11,10 @@ namespace DesafioPOO
     {
         public Endereco EndOrigem;
         public Endereco EndDestino;
-        public float ValorCorrida = 23.90f;
+        public float ValorCorrida = 23.91f;
         public Passageiro passageiro;
         public Motorista motorista;
-        public Corrida.Status statusviagem;
+        public Status statusviagem;
 
         public void SolicitarDestino (Endereco partida, Endereco chegada)
         {

@@ -25,7 +25,7 @@ namespace DesafioPOO
             Conta = _conta;
         }
 
-        public void DescricaoVeiculo()
+        public void DescreverVeiculo()
            
         {
             Console.Write("\nPor favor, insira os dados do veículo abaixo: ");

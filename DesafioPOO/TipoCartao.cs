@@ -43,5 +43,9 @@ namespace DesafioPOO
             
         }
 
+        public override string ToString()
+        {
+            return $"Número do cartão: {NumeroCartao}\nNome: {NomeTitular}\nValidade: {Validade}\nCVV: {CVV}\n  ";
+        }
     }
 }

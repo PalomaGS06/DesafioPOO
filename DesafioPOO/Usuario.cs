@@ -48,8 +48,9 @@ namespace DesafioPOO
                 return true;
             }
             else
-            {
-                Console.WriteLine("Nome ou senha inválidos, por favor, tente novamente!");
+            {   
+                Console.WriteLine("\n\n** Nome ou senha inválidos, por favor, tente novamente! **");
+                Console.WriteLine("\n\n\n");
             }
 
             return false;

@@ -186,7 +186,7 @@ namespace DesafioPOO
                     Thread.Sleep(3000);
 
                     viajar.statusviagem = Corrida.Status.Iniciada;
-                    Console.Write("\n\nO motorista chegou ao destino! ");
+                    Console.Write("\n\nO motorista chegou até você! ");
                     Thread.Sleep(5000);
 
                     viajar.statusviagem = Corrida.Status.Andando;
@@ -300,7 +300,7 @@ namespace DesafioPOO
 
             //Título centralizado na coloração azul claro
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write($"  NOPEIN  \n".PadLeft(73, ' '));
+            Console.Write($"  ☺ NOPEIN ☻  \n".PadLeft(73, ' '));
             Console.ResetColor();
 
             //Linhas centralizadas sublinhando o título

@@ -14,19 +14,21 @@ namespace DesafioPOO
             string senhaLogin;
             Passageiro passenger; 
 
-            do
-            {
-                Console.Write("Login:  ");
-                userLogin = Console.ReadLine();
+          
 
-                Console.Write("Senha:  ");
-                senhaLogin = Console.ReadLine();
+          
+            // Dados de Login e Senha para o usuário preencher
+            //do
+            //{
+            //    Console.Write("Login:  ");
+            //    userLogin = Console.ReadLine();
 
-                passenger = new Passageiro(_id: 463465256, _nome: "Bilbo", _email: "bilbobaggins@gmail.com", _senha: "naosouladrao", _telefone: 952529014);
+            //    Console.Write("Senha:  ");
+            //    senhaLogin = Console.ReadLine();
 
-                
+             passenger = new Passageiro(_id: 463465256, _nome: "Bilbo", _email: "bilbobaggins@gmail.com", _senha: "naosouladrao", _telefone: 952529014);    
 
-            } while (!passenger.FazerLogin(userLogin, senhaLogin));
+            //} while (!passenger.FazerLogin(userLogin, senhaLogin));
 
 
 
@@ -164,7 +166,7 @@ namespace DesafioPOO
 
                 //Título centralizado na coloração azul claro
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.Write($"  NOPEIN  \n".PadLeft(73, ' '));
+                Console.Write($" ☺ NOPEIN ☻ \n".PadLeft(73, ' '));
                 Console.ResetColor();
 
                 //Linhas centralizadas sublinhando o título

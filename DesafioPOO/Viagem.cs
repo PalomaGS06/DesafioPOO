@@ -22,9 +22,5 @@ namespace DesafioPOO
             Console.WriteLine($"Destino: {chegada} ");
         }
 
-        public void PagarMotorista(float valor)
-        {
-
-        }
     }
 }
